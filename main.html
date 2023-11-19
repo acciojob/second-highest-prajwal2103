@@ -9,7 +9,14 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			if(arr.length==0) return -Infinity;
+			arr.sort((a,b)=>{
+				b-a;
+			})
+			if(arr[arr.length-2]==1){
+				return -Infinity;
+			}
+			return arr[arr.length-2]
 			
 		}
 
