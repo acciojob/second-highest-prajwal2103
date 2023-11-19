@@ -13,10 +13,16 @@
 			arr.sort((a,b)=>{
 				b-a;
 			})
-			if(arr[arr.length-2]==1){
+		    let numberOfOnes=0
+			arr.forEach(function (element) {
+				if(element==1){
+					numberOfOnes++
+				}
+			})
+			if(numberOfOnes==arr.length){
 				return -Infinity;
 			}
-			return arr[arr.length-2]
+			return arr[1];
 			
 		}
 
